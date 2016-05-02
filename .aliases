@@ -1,0 +1,6 @@
+# General
+alias ll='ls -ltr'
+
+# Git
+alias g='git'
+alias gst='git status'
