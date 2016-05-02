@@ -5,3 +5,8 @@
 !.aliases
 !.gitignore
 !.profile
+
+# SSH
+!.ssh
+.ssh/*
+!.ssh/config
