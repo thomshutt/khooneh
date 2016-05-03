@@ -6,5 +6,7 @@ if [ "$BASH" ]; then
   fi
 fi
 
+eval "$(rbenv init -)"
+
 . ~/.aliases
 . ~/.functions
