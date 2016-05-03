@@ -1,6 +1,14 @@
 # General
-alias ll='ls -ltr'
+alias ll='ls -ltrG'
+alias irc='autossh -D 9999 -M 0 -t root@youmerun.com -- screen -raAd reith'
+alias glideall='glide update && glide install'
+alias zencoder='cd /Users/tshutt/gocode/src/github.com/zencoder'
 
 # Git
+alias git='hub'
 alias g='git'
+alias got='git'
 alias gst='git status'
+alias prs='git browse -- pulls'
+alias myprs='open https://github.com/pulls'
+alias trimbranches='git branch | grep -v "master" | xargs git branch -d '
