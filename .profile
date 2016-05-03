@@ -7,3 +7,4 @@ if [ "$BASH" ]; then
 fi
 
 . ~/.aliases
+. ~/.functions
