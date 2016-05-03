@@ -5,6 +5,7 @@
 !.aliases
 !.gitignore
 !.profile
+!.tmux.conf
 
 # SSH
 !.ssh
