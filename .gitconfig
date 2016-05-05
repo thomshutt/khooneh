@@ -1,0 +1,41 @@
+[user]
+  name = Thom Shutt
+  email = thomshutt@users.noreply.github.com
+[core]
+  excludesFile = ~/.gitignore
+  pager = less
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
+[url "git@github.com:"]
+  insteadOf = http://github.com/
+  insteadOf = https://github.com/
+  insteadOf = git://github.com/
+  insteadOf = git+ssh://github.com/
+[alias]
+  abandon-ship = reset HEAD^^ --hard
+  br = branch
+  ci = commit
+  co = checkout
+  d = diff -w
+  ds = diff --staged
+  fe = fetch --prune
+  l = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short --date=relative -n 14
+  ls = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n 14
+  lsv = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short --numstat
+  s = status -sb
+  st = status
+  tg = tag
+
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[push]
+	default = simple
+[init]
+	templatedir = ~/.git_template
+[credential]
+  helper = !aws --profile default codecommit credential-helper $@
+  UseHttpPath = true
