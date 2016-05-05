@@ -3,6 +3,8 @@ alias ll='ls -ltrG'
 alias irc='autossh -D 9999 -M 0 -t root@youmerun.com -- screen -raAd reith'
 alias glideall='glide update && glide install'
 alias zencoder='cd $GOPATH/src/github.com/zencoder'
+alias vi='nvim'
+alias vim='nvim'
 
 # Git
 alias git='hub'
