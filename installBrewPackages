@@ -2,7 +2,10 @@
 
 brew install autoconf
 brew install ctags
+brew install gimp
+brew install glide
 brew install hub
+brew install jq
 brew install libevent
 brew install openssl
 brew install pkg-config

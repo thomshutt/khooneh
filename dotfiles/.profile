@@ -15,8 +15,19 @@ export VISUAL=nvim
 export AWS_ACCESS_KEY_ID=1
 export AWS_SECRET_ACCESS_KEY=1
 
+export PATH=~/bin:$PATH
+export PATH=$GOPATH/bin:$PATH
+
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
 . ~/.aliases
 . ~/.functions
+
+if [ -f ~/.aliases_secret ]; then
+  . ~/.aliases_secret
+fi
