@@ -17,6 +17,7 @@ export AWS_SECRET_ACCESS_KEY=1
 
 export PATH=~/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
+export PATH=~/Workspace/fabric-utils/bin:$PATH
 
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi

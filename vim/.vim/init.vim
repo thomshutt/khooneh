@@ -45,7 +45,7 @@ set linebreak
 set list
 set listchars=tab:»—,trail:❐
 set modelines=1
-set mouse=a
+set mouse=
 set hidden
 set nowrap
 set nowrapscan

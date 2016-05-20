@@ -14,3 +14,6 @@ alias gst='git status'
 alias prs='git browse -- pulls'
 alias myprs='open https://github.com/pulls'
 alias trimbranches='git branch | grep -v "master" | xargs git branch -d '
+
+# Cucumber
+alias unused-steps='bundle exec cucumber --dry-run --format=usage | grep -B1 -i "not matched by any steps"'

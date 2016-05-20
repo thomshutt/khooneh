@@ -45,7 +45,7 @@ set linebreak
 set list
 set listchars=tab:»—,trail:❐
 set modelines=1
-set mouse=a
+set mouse=
 set hidden
 set nowrap
 set nowrapscan
@@ -80,12 +80,6 @@ nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap { {zz
 nnoremap } }zz
-
-" Nicer split-window navigation
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
 
 " Navigate vim location list
 nnoremap <C-n> :lne<cr>
