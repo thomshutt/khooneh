@@ -1,0 +1,23 @@
+# vi: set ft=sh ts=2 sw=2 expandtab
+
+alias l='ls --color --group-directories-first -halF'
+
+alias do=docker
+alias et=etcdctl
+alias fl=fleetctl
+alias jo=journalctl
+alias sy=systemctl
+
+alias un='fleetctl list-units'
+alias unf='fleetctl list-unit-files'
+
+# Pretend we're not using systemd or fleet. eg:
+# service jit-api stop
+# service manifest start
+service() {
+  fleetctl list-units \
+  | grep "$1" \
+  | cut -f1 \
+  | sort -u \
+  | xargs -n1 fleetctl "$2"
+}
