@@ -12,8 +12,7 @@ export GOPATH=~/gocode
 export GOROOT=/usr/local/go
 export EDITOR=nvim
 export VISUAL=nvim
-export AWS_ACCESS_KEY_ID=1
-export AWS_SECRET_ACCESS_KEY=1
+export FABPATH=~/gocode/src/github.com/zencoder/
 
 export PATH=~/bin:$PATH
 export PATH=$GOPATH/bin:$PATH

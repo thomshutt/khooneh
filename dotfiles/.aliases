@@ -6,6 +6,10 @@ alias zencoder='cd $GOPATH/src/github.com/zencoder'
 alias vi='nvim'
 alias vim='nvim'
 
+# AWS Roles
+alias role-dev='export AWS_DEFAULT_PROFILE=dev-admin'
+alias role-prod='export AWS_DEFAULT_PROFILE=dev-admin-prod'
+
 # Git
 alias git='hub'
 alias g='git'
