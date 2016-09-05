@@ -10,8 +10,8 @@ eval "$(rbenv init -)"
 
 export GOPATH=~/gocode
 export GOROOT=/usr/local/go
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=vim
+export VISUAL=vim
 export FABPATH=~/gocode/src/github.com/zencoder/
 
 export PATH=~/bin:$PATH

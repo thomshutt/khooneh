@@ -3,8 +3,6 @@ alias ll='ls -ltrG'
 alias irc='autossh -D 9999 -M 0 -t do -- screen -raAd reith'
 alias glideall='glide update && glide install'
 alias zencoder='cd $GOPATH/src/github.com/zencoder'
-alias vi='nvim'
-alias vim='nvim'
 
 # AWS Roles
 alias role-dev='export AWS_DEFAULT_PROFILE=dev-admin'
