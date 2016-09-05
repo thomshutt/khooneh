@@ -21,3 +21,19 @@ service() {
   | sort -u \
   | xargs -n1 fleetctl "$2"
 }
+
+[ -f /etc/environment ] && . /etc/environment
+
+readonly red=$(tput setaf 1)
+readonly green=$(tput setaf 2)
+readonly blue=$(tput setaf 6)
+readonly reset=$(tput sgr0)
+
+if [ "${STACK_ENV%%-*}" = 'prod' ]; then
+  readonly env_col=$red
+else
+  readonly env_col=$blue
+fi
+
+export PS1="${env_col}${AWS_ZONE} ${STACK_ENV} ${STACK_GROUP} ${green}\h ${blue}\w
+\$${reset} "

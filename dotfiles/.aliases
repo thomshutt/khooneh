@@ -8,7 +8,9 @@ alias vim='nvim'
 
 # AWS Roles
 alias role-dev='export AWS_DEFAULT_PROFILE=dev-admin'
+alias role-dev-ops='export AWS_DEFAULT_PROFILE=ops-admin'
 alias role-prod='export AWS_DEFAULT_PROFILE=dev-admin-prod'
+alias role-prod-ops='export AWS_DEFAULT_PROFILE=ops-admin-prod'
 
 # Git
 alias git='hub'
@@ -21,3 +23,11 @@ alias trimbranches='git branch | grep -v "master" | xargs git branch -d '
 
 # Cucumber
 alias unused-steps='bundle exec cucumber --dry-run --format=usage | grep -B1 -i "not matched by any steps"'
+
+# Ingest
+alias ingest-qa='~/Workspace/bolt-utils/bolt-ingest/cli.sh ingest test https://s3-us-west-2.amazonaws.com/fabric-temp/simpsons.mp4 --env qa'
+function ingest-qa-status { ~/Workspace/bolt-utils/bolt-ingest/cli.sh --env qa status "$1" | jq ".state, .progress, .playback_url" | grep -v null; } 
+alias ingest-stage='~/Workspace/bolt-utils/bolt-ingest/cli.sh ingest test https://s3-us-west-2.amazonaws.com/fabric-temp/simpsons.mp4 --env stage'
+function ingest-stage-status { ~/Workspace/bolt-utils/bolt-ingest/cli.sh --env stage status "$1" | jq ".state, .progress, .playback_url" | grep -v null; } 
+alias ingest-prod='~/Workspace/bolt-utils/bolt-ingest/cli.sh ingest test https://s3-us-west-2.amazonaws.com/fabric-temp/simpsons.mp4 --env prod'
+function ingest-prod-status { ~/Workspace/bolt-utils/bolt-ingest/cli.sh --env prod status "$1" | jq ".state, .progress, .playback_url" | grep -v null; } 

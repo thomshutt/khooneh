@@ -33,7 +33,7 @@
 	smudge = git-lfs smudge %f
 	required = true
 [push]
-	default = simple
+	default = current
 [init]
 	templatedir = ~/.git_template
 [credential]
